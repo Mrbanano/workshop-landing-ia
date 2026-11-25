@@ -1,0 +1,19 @@
+---
+// Botón de la acción principal. Todos los botones llevan al mismo lugar (ctaHref).
+import { ctaHref } from '../data/landing';
+interface Props { texto: string; variante?: 'solido' | 'claro' }
+const { texto, variante = 'solido' } = Astro.props;
+const clases =
+  variante === 'solido'
+    ? 'bg-acento text-white hover:brightness-110'
+    : 'bg-white text-acento hover:bg-secundario';
+---
+
+<a
+  href={ctaHref}
+  target="_blank"
+  rel="noopener"
+  class={`inline-flex items-center justify-center rounded-full px-7 py-3.5 text-base font-semibold shadow-sm transition ${clases}`}
+>
+  {texto}
+</a>

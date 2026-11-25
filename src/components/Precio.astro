@@ -1,0 +1,23 @@
+---
+import { precio, hero } from '../data/landing';
+import Boton from './Boton.astro';
+---
+
+{
+  precio.mostrar && (
+    <section id="precio" class="bg-secundario/50">
+      <div class="mx-auto grid max-w-5xl items-center gap-10 px-5 py-16 md:grid-cols-2">
+        <img src={precio.imagen.src} alt={precio.imagen.alt} width="1200" height="1200" loading="lazy" class="w-full rounded-2xl" />
+        <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <h2 class="text-3xl font-bold text-primario">{precio.titulo}</h2>
+          <p class="mt-4 font-titulos text-4xl font-extrabold">{precio.monto}</p>
+          <p class="text-sm text-texto/70">{precio.nota}</p>
+          <ul class="mt-6 space-y-2">
+            {precio.incluye.map((i) => <li>✓ {i}</li>)}
+          </ul>
+          <div class="mt-8"><Boton texto={hero.boton} /></div>
+        </div>
+      </div>
+    </section>
+  )
+}

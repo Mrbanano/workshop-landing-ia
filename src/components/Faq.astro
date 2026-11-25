@@ -1,0 +1,20 @@
+---
+import { faq } from '../data/landing';
+---
+
+<section id="faq" class="mx-auto max-w-3xl px-5 py-16">
+  <h2 class="text-center text-3xl font-bold text-primario">{faq.titulo}</h2>
+  <div class="mt-8 divide-y divide-secundario">
+    {
+      faq.items.map((f) => (
+        <details class="group py-4">
+          <summary class="flex cursor-pointer list-none items-center justify-between font-semibold">
+            {f.pregunta}
+            <span class="text-acento transition group-open:rotate-45">+</span>
+          </summary>
+          <p class="mt-3 text-texto/80">{f.respuesta}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>

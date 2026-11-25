@@ -1,0 +1,22 @@
+---
+// Solo testimonios REALES. Si aún no tienes, pon pruebaSocial.mostrar = false.
+import { pruebaSocial } from '../data/landing';
+---
+
+{
+  pruebaSocial.mostrar && (
+    <section id="prueba-social" class="mx-auto max-w-5xl px-5 py-16">
+      <h2 class="text-center text-3xl font-bold text-primario">{pruebaSocial.titulo}</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-2">
+        {pruebaSocial.testimonios.map((t) => (
+          <figure class="rounded-2xl border border-secundario p-6">
+            <blockquote class="text-lg">“{t.texto}”</blockquote>
+            <figcaption class="mt-4 text-sm text-texto/70">
+              <strong class="text-texto">{t.nombre}</strong> · {t.detalle}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )
+}

@@ -1,0 +1,12 @@
+---
+import { ctaFinal } from '../data/landing';
+import Boton from './Boton.astro';
+---
+
+<section id="cta-final" class="bg-primario">
+  <div class="mx-auto max-w-3xl px-5 py-16 text-center text-white">
+    <h2 class="text-3xl font-bold">{ctaFinal.titulo}</h2>
+    <p class="mt-4 text-lg text-white/85">{ctaFinal.texto}</p>
+    <div class="mt-8"><Boton texto={ctaFinal.boton} variante="claro" /></div>
+  </div>
+</section>

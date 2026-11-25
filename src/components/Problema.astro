@@ -1,0 +1,13 @@
+---
+import { problema } from '../data/landing';
+---
+
+<section id="problema" class="bg-secundario/50">
+  <div class="mx-auto max-w-3xl px-5 py-16 text-center">
+    <h2 class="text-3xl font-bold text-primario">{problema.titulo}</h2>
+    <p class="mt-4 text-lg text-texto/80">{problema.texto}</p>
+    <ul class="mt-8 grid gap-3 text-left sm:grid-cols-3">
+      {problema.puntos.map((p) => <li class="rounded-xl bg-white p-4 shadow-sm">✕ {p}</li>)}
+    </ul>
+  </div>
+</section>

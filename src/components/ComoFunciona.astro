@@ -1,0 +1,24 @@
+---
+import { pasos, hero } from '../data/landing';
+import Boton from './Boton.astro';
+---
+
+<section id="como-funciona" class="bg-secundario/50">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+    <h2 class="text-center text-3xl font-bold text-primario">{pasos.titulo}</h2>
+    <ol class="mt-10 grid gap-8 md:grid-cols-3">
+      {
+        pasos.items.map((p, i) => (
+          <li class="rounded-2xl bg-white p-6 shadow-sm">
+            <img src={p.imagen} alt={p.titulo} width="800" height="600" loading="lazy" class="w-full rounded-xl" />
+            <p class="mt-4 text-sm font-semibold text-acento">Paso {i + 1}</p>
+            <h3 class="text-xl font-bold">{p.titulo}</h3>
+            <p class="mt-2 text-texto/80">{p.texto}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <!-- Botón a mitad de página -->
+    <div class="mt-10 text-center"><Boton texto={hero.boton} /></div>
+  </div>
+</section>

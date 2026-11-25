@@ -1,0 +1,37 @@
+/*
+  DISEÑO DE TU LANDING · aquí cambias colores y tipografías en un solo lugar.
+  Llénalo con lo que pusiste en brief-visual.md.
+
+  1) Tipografías: cambia el link de Google Fonts (fonts.google.com → elige → "Get embed code")
+     y los nombres en --font-titulos y --font-texto.
+  2) Colores: cambia los códigos hex de la paleta.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Paleta (de brief-visual.md) */
+  --color-primario: #1d4ed8;   /* títulos y detalles de marca */
+  --color-secundario: #dbeafe; /* fondos suaves de secciones */
+  --color-acento: #2563eb;     /* botones: debe resaltar */
+  --color-fondo: #ffffff;      /* fondo general */
+  --color-texto: #0f172a;      /* texto principal */
+
+  /* Tipografías (de brief-visual.md) */
+  --font-titulos: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-texto: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-fondo font-texto text-texto antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-titulos text-balance;
+  }
+}

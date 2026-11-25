@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder Paso 1 800x600">
+  <!-- PLACEHOLDER: cámbialo por tu imagen real (guias/imagenes-prompt.md). Medida: 800x600 -->
+  <rect width="800" height="600" fill="#dbeafe"/>
+  <rect x="12" y="12" width="776" height="576" fill="none" stroke="#93c5fd" stroke-width="4" stroke-dasharray="18 12" rx="16"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="700" fill="#1d4ed8">Paso 1</text>
+  <text x="50%" y="50%" dy="58" text-anchor="middle" dominant-baseline="middle" font-family="system-ui, sans-serif" font-size="29" fill="#3b82f6">800x600</text>
+</svg>

@@ -1,0 +1,18 @@
+---
+import { beneficios } from '../data/landing';
+---
+
+<section id="beneficios" class="mx-auto max-w-6xl px-5 py-16">
+  <h2 class="text-center text-3xl font-bold text-primario">{beneficios.titulo}</h2>
+  <div class="mt-10 grid gap-8 md:grid-cols-3">
+    {
+      beneficios.items.map((b) => (
+        <article class="text-center">
+          <img src={b.imagen} alt={b.titulo} width="800" height="800" loading="lazy" class="mx-auto w-40 rounded-2xl md:w-48" />
+          <h3 class="mt-5 text-xl font-bold">{b.titulo}</h3>
+          <p class="mt-2 text-texto/80">{b.texto}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>

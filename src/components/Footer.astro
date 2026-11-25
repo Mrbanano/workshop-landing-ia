@@ -1,0 +1,14 @@
+---
+import { footer, seo } from '../data/landing';
+const anio = new Date().getFullYear();
+---
+
+<footer class="mx-auto max-w-6xl px-5 py-10 text-sm text-texto/70">
+  <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+    <p><strong class="text-texto">{seo.marca}</strong> · {footer.ciudad} · {footer.contacto}</p>
+    <nav class="flex gap-4">
+      {footer.redes.map((r) => <a href={r.url} target="_blank" rel="noopener" class="hover:text-acento">{r.nombre}</a>)}
+    </nav>
+  </div>
+  <p class="mt-6">© {anio} {seo.marca}</p>
+</footer>

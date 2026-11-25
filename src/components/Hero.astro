@@ -1,0 +1,22 @@
+---
+import { hero, seo } from '../data/landing';
+import Boton from './Boton.astro';
+---
+
+<header class="mx-auto max-w-6xl px-5 pt-6">
+  <p class="font-titulos text-lg font-bold text-primario">{seo.marca}</p>
+</header>
+<section id="hero" class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 md:grid-cols-2 md:py-20">
+  <div>
+    <h1 class="text-4xl font-extrabold leading-tight text-texto md:text-5xl">{hero.headline}</h1>
+    <p class="mt-5 text-lg text-texto/80">{hero.subheadline}</p>
+    <div class="mt-8"><Boton texto={hero.boton} /></div>
+  </div>
+  <img
+    src={hero.imagen.src}
+    alt={hero.imagen.alt}
+    width={hero.imagen.ancho}
+    height={hero.imagen.alto}
+    class="w-full rounded-2xl"
+  />
+</section>

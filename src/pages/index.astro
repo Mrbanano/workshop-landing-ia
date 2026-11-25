@@ -1,0 +1,32 @@
+---
+/*
+  Tu landing: las secciones van en el mismo orden que tu boceto y tu contenido.md.
+  Para mover o quitar una sección, mueve o borra su línea aquí abajo.
+*/
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Problema from '../components/Problema.astro';
+import Beneficios from '../components/Beneficios.astro';
+import ComoFunciona from '../components/ComoFunciona.astro';
+import PruebaSocial from '../components/PruebaSocial.astro';
+import Precio from '../components/Precio.astro';
+import Faq from '../components/Faq.astro';
+import CtaFinal from '../components/CtaFinal.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFlotante from '../components/WhatsAppFlotante.astro';
+---
+
+<Layout>
+  <main>
+    <Hero />
+    <Problema />
+    <Beneficios />
+    <ComoFunciona />
+    <PruebaSocial />
+    <Precio />
+    <Faq />
+    <CtaFinal />
+  </main>
+  <Footer />
+  <WhatsAppFlotante />
+</Layout>
